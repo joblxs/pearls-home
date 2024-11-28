@@ -1,13 +1,11 @@
 <template>
-  <router-view />
+  这是demo页
 </template>
 
 <script>
-
 export default {
-  name: 'App'
 }
 </script>
 
-<style>
+<style scoped>
 </style>
