@@ -2,7 +2,7 @@
   <lay-tooltip position="left-start" content="切换主题">
     <lay-backtop
       @click="toggleTheme"
-      :bottom="150"
+      :bottom="100"
       circle
       size="small"
       bgcolor="#5FB878"

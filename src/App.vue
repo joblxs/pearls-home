@@ -8,6 +8,10 @@
   <lay-config-provider :theme="newTheme">
     <router-view />
   </lay-config-provider>
+
+  <lay-tooltip position="left-start" content="返回顶部">
+    <lay-backtop :bottom="150" circle size="small" bgcolor="#5FB878" iconSize="22" icon="layui-icon-top" ></lay-backtop>
+  </lay-tooltip>
 </template>
 
 <script>
@@ -49,6 +53,23 @@ export default {
     this.newTheme = this.theme;
   }
 }
+// 使用防抖函数（debounce）来延迟处理 ResizeObserver 的回调函数，以避免频繁触发重排（reflow）或重绘（repaint）
+const debounce = (fn, delay) => {
+  let timer;
+  return (...args) => {
+    if (timer) clearTimeout(timer);
+    timer = setTimeout(() => {
+      fn(...args);
+    }, delay);
+  };
+};
+const _ResizeObserver = window.ResizeObserver;
+window.ResizeObserver = class ResizeObserver extends _ResizeObserver {
+  constructor(callback) {
+    callback = debounce(callback, 200);
+    super(callback);
+  }
+};
 </script>
 
 <style>
