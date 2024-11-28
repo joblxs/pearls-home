@@ -2,22 +2,27 @@
   <!--实时监测fps-->
   <FpsCounter />
   <!--主题切换-->
-  <ThemeToggler ref="theme" />
+  <ThemeToggler />
 
   <!--黑暗/明亮主题-->
-  <lay-config-provider :theme="theme.theme">
+  <lay-config-provider :theme="newTheme">
     <router-view />
   </lay-config-provider>
 </template>
 
 <script>
-import { ref } from 'vue';
 import WOW from 'wow.js';
+import { mapState } from 'vuex';
 import FpsCounter from './utils/FpsCounter.vue'
 import ThemeToggler from './utils/ThemeToggler.vue';
 
 export default {
   name: 'App',
+  data() {
+    return {
+      newTheme: ''
+    };
+  },
   components: {
     FpsCounter, ThemeToggler
   },
@@ -32,9 +37,16 @@ export default {
       resetAnimation: true,
     }).init();
   },
-  setup() {
-    const theme  = ref('null')
-    return { theme };
+  computed: {
+    ...mapState(['theme'])
+  },
+  watch: {
+    theme(newThemeValue) {
+      this.newTheme = newThemeValue;
+    }
+  },
+  created() {
+    this.newTheme = this.theme;
   }
 }
 </script>

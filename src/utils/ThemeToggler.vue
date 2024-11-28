@@ -14,9 +14,11 @@
 
 <script>
 import { ref, onMounted } from 'vue';
+import { useStore } from 'vuex';
 
 export default {
   setup() {
+    const store = useStore();
     const theme = ref('light');
 
     // 切换主题
@@ -27,6 +29,7 @@ export default {
 
     // 应用主题到页面
     const applyTheme = (newTheme) => {
+      store.dispatch('setTheme', newTheme);
       theme.value = newTheme;
 
       // 移除旧的<style>元素
