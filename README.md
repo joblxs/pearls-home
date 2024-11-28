@@ -1,24 +1,18 @@
 # pearls-home
 
-## Project setup
+> 基于 vue3 + layui-vue + vue-router + wow.js + animate.css + nprogress 的主页
+
+## 安装依赖
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 本地运行
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### 编译
 ```
 npm run build
 ```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
