@@ -1,5 +1,5 @@
 <template>
-  这是demo页
+  <div class="wow animate__animated animate__zoomIn">这是demo页</div>
 </template>
 
 <script>
