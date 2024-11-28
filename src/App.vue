@@ -3,6 +3,8 @@
   <FpsCounter />
   <!--主题切换-->
   <ThemeToggler />
+  <!--粒子特效-->
+  <VueParticles />
 
   <!--黑暗/明亮主题-->
   <lay-config-provider :theme="newTheme">
@@ -19,6 +21,7 @@ import WOW from 'wow.js';
 import { mapState } from 'vuex';
 import FpsCounter from './utils/FpsCounter.vue'
 import ThemeToggler from './utils/ThemeToggler.vue';
+import VueParticles from './utils/VueParticles.vue';
 
 export default {
   name: 'App',
@@ -28,7 +31,7 @@ export default {
     };
   },
   components: {
-    FpsCounter, ThemeToggler
+    FpsCounter, ThemeToggler, VueParticles
   },
   mounted() {
     new WOW({
@@ -73,4 +76,5 @@ window.ResizeObserver = class ResizeObserver extends _ResizeObserver {
 </script>
 
 <style>
+
 </style>

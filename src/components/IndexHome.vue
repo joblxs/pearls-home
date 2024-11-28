@@ -1,29 +1,23 @@
 <template>
-  <div class="wow animate__animated animate__zoomIn">这是demo页， {{newTheme}}</div>
+  <!--横幅-->
+  <BannerHome />
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import BannerHome from "@/components/module/BannerHome.vue";
 
 export default {
-  data() {
-    return {
-      newTheme: ''
-    };
+  components: {
+    BannerHome
   },
-  computed: {
-    ...mapState(['theme'])
-  },
-  watch: {
-    theme(newThemeValue) {
-      this.newTheme = newThemeValue;
-    }
-  },
-  created() {
-    this.newTheme = this.theme;
+  mounted() {
+    document.title = '主页';
+    document.querySelector('meta[name="keywords"]').setAttribute('content', '主页，个人网站，好看的个人主页');
+    document.querySelector('meta[name="description"]').setAttribute('content', '个人主页搭建');
   }
 }
 </script>
 
 <style scoped>
+
 </style>

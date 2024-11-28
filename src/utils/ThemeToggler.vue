@@ -30,6 +30,7 @@ export default {
     // 应用主题到页面
     const applyTheme = (newTheme) => {
       store.dispatch('setTheme', newTheme);
+      store.dispatch('setColor', newTheme === 'light' ? '#000' : '#fff');
       theme.value = newTheme;
 
       // 移除旧的<style>元素
