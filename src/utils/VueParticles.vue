@@ -5,7 +5,7 @@
     :particleOpacity="0.7"
     :particlesNumber="80"
     shapeType="circle"
-    :particleSize="1"
+    :particleSize="2"
     linesColor="#fff"
     :linesWidth="1"
     :lineLinked="false"
@@ -69,7 +69,7 @@ export default {
 <style scoped>
 #particles-js {
   width: 100%;
-  height: calc(100% - 100px);
-  position: absolute;
+  height: 100vh;
+  position: fixed;
 }
 </style>
