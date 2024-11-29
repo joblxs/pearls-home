@@ -1,6 +1,5 @@
 <template>
   <div class="banner">
-<!--    <img src="@/assets/images/xingkong.webp" class="banner-img" />-->
     <div class="banner-img"></div>
     <div class="title wow animate__animated animate__bounceIn" data-wow-duration="2s">
       <h1>拾贝</h1>

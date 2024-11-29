@@ -8,7 +8,8 @@
       bgcolor="#5FB878"
       iconSize="22"
       :showHeight="0"
-      :icon="theme === 'dark' ? 'layui-icon-light' : 'layui-icon-moon'"></lay-backtop>
+      :icon="theme === 'dark' ? 'layui-icon-light' : 'layui-icon-moon'"
+      disabled></lay-backtop>
   </lay-tooltip>
 </template>
 
