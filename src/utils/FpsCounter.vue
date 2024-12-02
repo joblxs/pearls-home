@@ -65,6 +65,6 @@ export default {
   border-radius: 4px;
   z-index: 99;
   font-family: 'Arial', sans-serif;
-  /* background: var(--10-background-rgba); */
+  background: var(--7-background-rgba);
 }
 </style>
