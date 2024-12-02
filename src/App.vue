@@ -79,5 +79,19 @@ window.ResizeObserver = class ResizeObserver extends _ResizeObserver {
 </script>
 
 <style>
-
+/* 定义滚动条的宽度 */
+::-webkit-scrollbar {
+  width: 8px;
+}
+/* 定义滚动条的轨道颜色 */
+::-webkit-scrollbar-track {
+  background-color: var(--border-color);
+}
+/* 定义滚动条的滑块颜色 */
+::-webkit-scrollbar-thumb, ::-webkit-scrollbar-thumb:hover {
+  background-color: var(--background-color);
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  border-radius: 20%;
+}
 </style>
