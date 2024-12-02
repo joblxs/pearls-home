@@ -7,7 +7,6 @@ import confetti from 'canvas-confetti'
 
 const addConfetti = (e) => {
   const end = Date.now() + 0.3 * 1000;
-  const colors = ['#FF0000', '#00FF00', '#0000FF'];
 
   (function frame() {
     confetti({
@@ -21,7 +20,8 @@ const addConfetti = (e) => {
         x: e.clientX / innerWidth, // origin.x：Number（默认值：0.5）：发射的水平方向原点，0 表示左边缘，1 表示右边缘
         y: e.clientY / innerHeight // origin.y：Number (默认值: 0.5) :发射的垂直方向原点，0 表示上边缘，1 表示下边缘。
       },
-      colors: colors // Array：颜色字符串数组
+      colors: ['#FF0000', '#00FF00', '#0000FF'] // Array：颜色字符串数组
+      // shapes: ['circle', 'circle', 'square'] // 五彩纸屑的形状数组，可以为 square 和 circle。默认设置是均匀混合使用这两种形状。['circle', 'circle', 'square'] 表示使用三分之二的圆圈和三分之一的正方形
     });
 
     if (Date.now() < end) {
