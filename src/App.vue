@@ -5,6 +5,8 @@
   <ThemeToggler />
   <!--粒子特效-->
   <VueParticles />
+  <!--纸屑-->
+  <ConfettiEffect />
 
   <!--黑暗/明亮主题-->
   <lay-config-provider :theme="newTheme">
@@ -22,6 +24,7 @@ import { mapState } from 'vuex';
 import FpsCounter from './utils/FpsCounter.vue'
 import ThemeToggler from './utils/ThemeToggler.vue';
 import VueParticles from './utils/VueParticles.vue';
+import ConfettiEffect from "@/utils/ConfettiEffect.vue";
 
 export default {
   name: 'App',
@@ -31,7 +34,7 @@ export default {
     };
   },
   components: {
-    FpsCounter, ThemeToggler, VueParticles
+    FpsCounter, ThemeToggler, VueParticles, ConfettiEffect
   },
   mounted() {
     new WOW({

@@ -63,7 +63,7 @@ export default {
   left: 10px;
   padding: 8px;
   border-radius: 4px;
-  z-index: 1000;
+  z-index: 99;
   font-family: 'Arial', sans-serif;
   /* background: var(--10-background-rgba); */
 }

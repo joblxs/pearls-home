@@ -52,7 +52,7 @@ export default {
   text-align: center;
   margin: 0 auto;
   max-width: 800px;
-  z-index: 1; /* 确保标题在图片之上 */
+  z-index: 3; /* 确保标题在图片之上 */
 }
 .title h1 {
   font-size: 2.5rem;
@@ -72,6 +72,7 @@ export default {
   transform: translateX(-50%);
   transition: all .5s ease-out;
   cursor: pointer;
+  z-index: 3;
 }
 .next:hover {
   background-color: var(--background-color);

@@ -3,7 +3,7 @@
     :key="newTheme"
     :color="newColor"
     :particleOpacity="0.7"
-    :particlesNumber="80"
+    :particlesNumber="15"
     shapeType="circle"
     :particleSize="2"
     linesColor="#fff"
@@ -71,5 +71,6 @@ export default {
   width: 100%;
   height: 100vh;
   position: fixed;
+  z-index: 1;
 }
 </style>

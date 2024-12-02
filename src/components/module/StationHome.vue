@@ -61,6 +61,7 @@ export default {
   text-align: center;
   overflow: hidden;
   background-color: var(--7-background-rgba);
+  z-index: 3;
 }
 
 .links li a {
@@ -73,7 +74,7 @@ export default {
   -webkit-transition: all .6s linear;
   transition: all .6s linear;
   position: relative;
-  z-index: 1;
+  z-index: 3;
 }
 
 .links li:after {
