@@ -4,7 +4,7 @@
   <!--主题切换-->
   <ThemeToggler />
   <!--粒子特效-->
-  <VueParticles />
+  <TsParticles />
   <!--纸屑-->
   <ConfettiEffect />
 
@@ -23,7 +23,7 @@ import WOW from 'wow.js';
 import { mapState } from 'vuex';
 import FpsCounter from './utils/FpsCounter.vue'
 import ThemeToggler from './utils/ThemeToggler.vue';
-import VueParticles from './utils/VueParticles.vue';
+import TsParticles from './utils/TsParticles.vue';
 import ConfettiEffect from "@/utils/ConfettiEffect.vue";
 
 export default {
@@ -34,7 +34,7 @@ export default {
     };
   },
   components: {
-    FpsCounter, ThemeToggler, VueParticles, ConfettiEffect
+    FpsCounter, ThemeToggler, TsParticles, ConfettiEffect
   },
   mounted() {
     new WOW({

@@ -9,11 +9,13 @@
   },
   "dependencies": {
     "@layui/layui-vue": "^2.19.3",
+    "@tsparticles/vue3": "^3.0.1",
     "animate.css": "^4.1.1",
     "axios": "^1.7.8",
     "canvas-confetti": "^1.9.3",
     "core-js": "^3.8.3",
     "nprogress": "^0.2.0",
+    "tsparticles": "^3.7.1",
     "vue": "^3.2.13",
     "vue-router": "^4.5.0",
     "vuex": "^4.0.2",
@@ -26,8 +28,7 @@
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
     "eslint": "^7.32.0",
-    "eslint-plugin-vue": "^8.0.3",
-    "vue-particles": "^1.0.9"
+    "eslint-plugin-vue": "^8.0.3"
   },
   "eslintConfig": {
     "root": true,
