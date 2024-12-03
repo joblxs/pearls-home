@@ -3,25 +3,46 @@
     <div class="banner-img"></div>
     <div class="title wow animate__animated animate__bounceIn" data-wow-duration="2s">
       <h1>拾贝</h1>
-      <p>只要朝着一个方向努力，一切都会变得得心应手</p>
+      <p>{{ dailyQuote }}</p>
     </div>
     <lay-icon type="layui-icon-down" class="next wow animate__animated animate__zoomIn" data-wow-duration="2s" @click="scrollToNextSection"></lay-icon>
   </div>
 </template>
 
 <script>
+import { ref, onMounted } from 'vue';
+import axios from 'axios';
+
 export default {
   setup() {
+    // 每日一言
+    const dailyQuote = ref('');
+    const fetchDailyQuote = async () => {
+      try {
+        const response = await axios.get('https://tools.mgtv100.com/external/v1/pear/duanZi');
+        dailyQuote.value = response.data.data;
+      } catch (error) {
+        console.error('请求每日一言出错：', error);
+        dailyQuote.value = '';
+      }
+    };
+
+    // 滚动到第二屏的位置
     const scrollToNextSection = () => {
-      // 滚动到第二屏的位置
       const nextSectionPosition = window.innerHeight;
       window.scrollTo({
         top: nextSectionPosition,
         behavior: 'smooth'
       });
     }
+
+    // 在组件挂载时调用获取每日一言的函数
+    onMounted(() => {
+      fetchDailyQuote();
+    });
+
     return {
-      scrollToNextSection
+      scrollToNextSection, dailyQuote
     }
   }
 }
