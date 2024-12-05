@@ -1,4 +1,5 @@
 <template>
+  <h1 class="wow animate__animated animate__zoomIn">站点</h1>
   <div class="section">
     <div class="links">
       <ul>
@@ -18,16 +19,8 @@ export default {
   data() {
     return {
       siteItems: [
-        {
-          title: '个人主页',
-          icon: 'layui-icon-home',
-          link: '/'
-        },
-        {
-          title: '博客',
-          icon: 'layui-icon-template',
-          link: 'https://www.lxshuai.top/'
-        }
+        {title: '个人主页', icon: 'layui-icon-home', link: '/'},
+        {title: '博客', icon: 'layui-icon-template', link: 'https://www.lxshuai.top/'}
       ]
     };
   },
@@ -35,16 +28,36 @@ export default {
 </script>
 
 <style scoped>
+h1 {
+  font-size: 32px;
+  padding-bottom: 30px;
+  position: relative;
+  font-weight: 500;
+  text-align: center;
+  margin: 30px 0;
+}
+
+h1:after {
+  position: absolute;
+  width: 50px;
+  margin-left: -25px;
+  height: 2px;
+  content: "";
+  left: 50%;
+  bottom: 0;
+  background-color: var(--background-color);
+}
+
 .section {
   width: 100%;
   position: relative;
   padding: 100px 0;
+  text-align: center;
   background-image: url("@/assets/images/earth.webp");
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  text-align: center;
 }
 
 .links li {
@@ -62,6 +75,7 @@ export default {
   overflow: hidden;
   background-color: var(--7-background-rgba);
   z-index: 3;
+  border-radius: 5%;
 }
 
 .links li a {

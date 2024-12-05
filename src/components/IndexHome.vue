@@ -1,6 +1,8 @@
 <template>
   <!--横幅-->
   <BannerHome />
+  <!--热榜-->
+  <HotHome />
   <!--站点-->
   <StationHome />
   <!--底部-->
@@ -11,10 +13,11 @@
 import BannerHome from "@/components/module/BannerHome.vue";
 import StationHome from "@/components/module/StationHome.vue";
 import FooterHome from "@/components/module/FooterHome.vue";
+import HotHome from "@/components/module/HotHome.vue";
 
 export default {
   components: {
-    BannerHome, StationHome, FooterHome
+    BannerHome, StationHome, FooterHome, HotHome
   },
   mounted() {
     document.title = '主页';
