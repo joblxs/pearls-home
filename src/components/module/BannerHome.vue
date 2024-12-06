@@ -19,8 +19,8 @@ export default {
     const dailyQuote = ref('');
     const fetchDailyQuote = async () => {
       try {
-        const response = await axios.get('https://tools.mgtv100.com/external/v1/pear/duanZi');
-        dailyQuote.value = response.data.data;
+        const response = await axios.get('https://api.vvhan.com/api/ian/rand?type=json');
+        dailyQuote.value = response.data.data.content;
       } catch (error) {
         console.error('请求每日一言出错：', error);
         dailyQuote.value = '';
@@ -77,6 +77,7 @@ export default {
 }
 .title h1 {
   font-size: 2.5rem;
+  font-family: YunFengFeiYunTi;
 }
 .title p {
   font-size: 1rem;

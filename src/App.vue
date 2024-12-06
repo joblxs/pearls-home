@@ -79,6 +79,12 @@ window.ResizeObserver = class ResizeObserver extends _ResizeObserver {
 </script>
 
 <style>
+@font-face {
+  font-family: 'YunFengFeiYunTi';
+  src: url('@/assets/fonts/YunFengFeiYunTi-2.ttf') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 /* 定义滚动条的宽度 */
 ::-webkit-scrollbar {
   width: 8px;

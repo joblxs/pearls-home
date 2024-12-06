@@ -35,6 +35,8 @@ h1 {
   font-weight: 500;
   text-align: center;
   margin: 30px 0;
+  padding-top: 15px;
+  font-family: YunFengFeiYunTi;
 }
 
 h1:after {
