@@ -1,3 +1,4 @@
+<!--时间格式化-->
 <template>
   <span>{{ formattedDate }}</span>
 </template>

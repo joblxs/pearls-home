@@ -1,3 +1,4 @@
+<!--鼠标点击出现纸屑-->
 <template>
   <div @click="addConfetti" class="clickable-area"></div>
 </template>

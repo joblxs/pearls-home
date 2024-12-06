@@ -1,3 +1,4 @@
+<!--实时显示fps-->
 <template>
   <div class="fps-counter">
     <span>FPS: {{ fpsValue }}</span>

@@ -1,3 +1,4 @@
+<!--星空背景-->
 <template>
   <div>
     <vue-particles id="tsparticles" :key="newTheme" :options="particlesOption" />

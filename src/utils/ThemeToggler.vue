@@ -1,3 +1,4 @@
+<!--切换主题-->
 <template>
   <lay-tooltip position="left-start" content="切换主题">
     <lay-backtop
