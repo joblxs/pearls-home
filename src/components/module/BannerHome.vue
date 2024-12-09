@@ -95,6 +95,21 @@ export default {
   transition: all .5s ease-out;
   cursor: pointer;
   z-index: 3;
+  animation: breathe 3s infinite;
+}
+@keyframes breathe {
+  0% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
 }
 .next:hover {
   background-color: var(--background-color);
