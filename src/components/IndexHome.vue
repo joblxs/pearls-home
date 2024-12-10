@@ -1,4 +1,6 @@
 <template>
+  <!--导航抽屉-->
+  <NavHome />
   <!--横幅-->
   <BannerHome />
   <!--热榜-->
@@ -14,10 +16,11 @@ import BannerHome from "@/components/module/BannerHome.vue";
 import StationHome from "@/components/module/StationHome.vue";
 import FooterHome from "@/components/module/FooterHome.vue";
 import HotHome from "@/components/module/HotHome.vue";
+import NavHome from "@/components/module/NavHome.vue";
 
 export default {
   components: {
-    BannerHome, StationHome, FooterHome, HotHome
+    BannerHome, StationHome, FooterHome, HotHome, NavHome
   },
   mounted() {
     document.title = '主页';
