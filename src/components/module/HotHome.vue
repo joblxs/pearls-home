@@ -41,7 +41,7 @@ export default {
     // 定义一个函数来获取单个平台的热榜数据
     const fetchHotList = async (title) => {
       try {
-        const response = await axios.get(`https://api.pearktrue.cn/api/dailyhot/?title=${encodeURIComponent(title)}`);
+        const response = await axios.get(`https://api.pearktrue.cn/api/social/hotlist.php?type=${encodeURIComponent(title)}`);
         return response.data;
       } catch (error) {
         console.error('请求热榜数据出错：', error);
