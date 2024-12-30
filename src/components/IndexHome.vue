@@ -3,10 +3,10 @@
   <NavHome />
   <!--横幅-->
   <BannerHome />
-  <!--热榜-->
-  <HotHome />
   <!--站点-->
   <StationHome />
+  <!--热榜-->
+  <HotHome />
   <!--底部-->
   <FooterHome />
 </template>
