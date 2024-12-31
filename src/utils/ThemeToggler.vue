@@ -70,8 +70,8 @@ export default {
 
     // 应用默认主题
     const applyDefaultTheme = () => {
-      const currentHour = new Date().getHours();
-      applyTheme(currentHour >= 6 && currentHour < 18 ? 'light' : 'dark');
+      const matchMedia = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+      applyTheme(matchMedia);
     };
 
     // 组件卸载时清理过期主题设置
