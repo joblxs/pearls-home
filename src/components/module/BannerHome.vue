@@ -72,15 +72,15 @@ export default {
 .title {
   text-align: center;
   margin: 0 auto;
-  max-width: 800px;
+  max-width: 90vw;
   z-index: 3; /* 确保标题在图片之上 */
 }
 .title h1 {
-  font-size: 2.5rem;
+  font-size: 32px;
   font-family: YunFengFeiYunTi;
 }
 .title p {
-  font-size: 1rem;
+  font-size: 16px;
   letter-spacing: 0.5rem;
   margin: 1rem 0;
 }
@@ -115,26 +115,8 @@ export default {
   background-color: var(--background-color);
 }
 .next:before {
-  font-size: 3rem;
+  font-size: 32px;
   display: table;
   margin: 0 auto;
-}
-@media (max-width: 768px) {
-  .title h1 {
-    font-size: 2rem;
-  }
-  .title p {
-    font-size: 0.9rem;
-    letter-spacing: 0.3rem;
-  }
-}
-@media (max-width: 480px) {
-  .title h1 {
-    font-size: 1.5rem;
-  }
-  .title p {
-    font-size: 0.8rem;
-    letter-spacing: 0.2rem;
-  }
 }
 </style>

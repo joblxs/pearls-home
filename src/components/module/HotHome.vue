@@ -102,7 +102,7 @@ h1:after {
 }
 
 .hot {
-  max-width: 80vw;
+  max-width: 85vw;
   border-radius: 1%;
   margin: 0 auto;
   background-image: url("@/assets/images/shan.webp");
@@ -122,7 +122,7 @@ h1:after {
 }
 
 .hot-list-article {
-  height: 300px;
+  height: 330px;
   overflow-y: auto; /* 超出时显示滚动条 */
 }
 
