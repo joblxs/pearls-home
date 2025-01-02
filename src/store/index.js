@@ -4,7 +4,8 @@ export default createStore({
   state: () => ({
     // 定义state属性
     theme: 'light',
-    color: '#000'
+    color: '#000',
+    background: true
   }),
   mutations: {
     // 定义mutations
@@ -13,6 +14,9 @@ export default createStore({
     },
     setColor(state, newColor) {
       state.color = newColor;
+    },
+    setBackground(state, background) {
+      state.background = background;
     }
   },
   actions: {
@@ -21,6 +25,9 @@ export default createStore({
     },
     setColor({ commit }, newColor) {
       commit('setColor', newColor);
+    },
+    setBackground({ commit }, background) {
+      commit('setBackground', background);
     }
   },
   getters: {
@@ -29,6 +36,9 @@ export default createStore({
     },
     getColor(state) {
       return state.color;
+    },
+    getBackground(state) {
+      return state.background;
     },
   }
 });

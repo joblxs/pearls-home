@@ -3,10 +3,12 @@
   <FpsCounter />
   <!--主题切换-->
   <ThemeToggler />
+  <!--关闭背景/点击效果-->
+  <CloseTheme />
   <!--粒子特效-->
-  <TsParticles />
+  <TsParticles v-show="newBackground" />
   <!--纸屑-->
-  <ConfettiEffect />
+  <ConfettiEffect v-show="newBackground" />
 
   <!--黑暗/明亮主题-->
   <lay-config-provider :theme="newTheme">
@@ -14,7 +16,7 @@
   </lay-config-provider>
 
   <lay-tooltip position="left-start" content="返回顶部">
-    <lay-backtop :bottom="150" circle size="small" bgcolor="#5FB878" iconSize="22" icon="layui-icon-top" ></lay-backtop>
+    <lay-backtop :bottom="180" circle size="small" bgcolor="#5FB878" iconSize="22" icon="layui-icon-top" ></lay-backtop>
   </lay-tooltip>
 </template>
 
@@ -25,15 +27,18 @@ import FpsCounter from './utils/FpsCounter.vue'
 import ThemeToggler from './utils/ThemeToggler.vue';
 import TsParticles from './utils/TsParticles.vue';
 import ConfettiEffect from "@/utils/ConfettiEffect.vue";
+import CloseTheme from "@/utils/CloseTheme.vue";
 
 export default {
   name: 'App',
   data() {
     return {
-      newTheme: ''
+      newTheme: '',
+      newBackground: true
     };
   },
   components: {
+    CloseTheme,
     FpsCounter, ThemeToggler, TsParticles, ConfettiEffect
   },
   mounted() {
@@ -48,15 +53,19 @@ export default {
     }).init();
   },
   computed: {
-    ...mapState(['theme'])
+    ...mapState(['theme', 'background'])
   },
   watch: {
     theme(newThemeValue) {
       this.newTheme = newThemeValue;
+    },
+    background(newBackgroundValue) {
+      this.newBackground = newBackgroundValue;
     }
   },
   created() {
     this.newTheme = this.theme;
+    this.newBackground = this.background;
   }
 }
 // 使用防抖函数（debounce）来延迟处理 ResizeObserver 的回调函数，以避免频繁触发重排（reflow）或重绘（repaint）

@@ -374,6 +374,7 @@ onBeforeUnmount(() => {
 .footer {
   position: relative;
   margin-top: 20px;
+  z-index: 3;
 }
 .container {
   background: -webkit-linear-gradient(left, rgba(89, 114, 192, 0.8), rgba(89 ,114, 192, 0.2));
@@ -382,7 +383,6 @@ onBeforeUnmount(() => {
   width: 100%;
 }
 .layui-row {
-  z-index: 3;
   text-align: right;
   position: absolute;
   right: 30PX;
