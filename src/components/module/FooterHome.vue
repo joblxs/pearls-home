@@ -181,7 +181,8 @@ const RENDERER = {
     requestAnimationFrame(this.render);
     this.controlStatus();
     this.context.clearRect(0, 0, this.width, this.height);
-    this.context.fillStyle = 'hsl(0, 0%, 95%)';
+    // this.context.fillStyle = 'hsl(0, 0%, 95%)';
+    this.context.fillStyle = 'rgba(89, 114, 192, 0.8)';
 
     for (let i = 0, count = this.fishes.length; i < count; i++) this.fishes[i].render(this.context);
     this.context.save();
