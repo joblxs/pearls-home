@@ -1,6 +1,7 @@
 <template>
   <div class="banner">
-    <div class="banner-img"></div>
+<!--    <div class="banner-img"></div>-->
+    <object class="background-iframe" :data="newBackground" type="text/html"></object>
     <div class="title wow animate__animated animate__bounceIn" data-wow-duration="2s">
       <h1>拾贝</h1>
       <p>{{ dailyQuote }}</p>
@@ -10,13 +11,17 @@
 </template>
 
 <script>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, computed, watch } from 'vue';
 import axios from 'axios';
+import { useStore } from 'vuex';
 
 export default {
   setup() {
+    const store = useStore();
     // 每日一言
     const dailyQuote = ref('');
+    const newBackground = ref('');
+
     const fetchDailyQuote = async () => {
       try {
         const response = await axios.get('https://api.vvhan.com/api/ian/rand?type=json');
@@ -36,13 +41,20 @@ export default {
       });
     }
 
+    // 获取主题
+    const theme = computed(() => store.state.theme);
+    // 监听主题变化
+    watch(theme, (newTheme) => {
+      newBackground.value = `/theme/background/Background-${newTheme}-${Math.random() < 0.5 ? 0 : 1}.html`;
+    });
     // 在组件挂载时调用获取每日一言的函数
     onMounted(() => {
       fetchDailyQuote();
+      newBackground.value = `/theme/background/Background-${theme.value}-${Math.random() < 0.5 ? 0 : 1}.html`;
     });
 
     return {
-      scrollToNextSection, dailyQuote
+      scrollToNextSection, dailyQuote, newBackground
     }
   }
 }
@@ -56,6 +68,17 @@ export default {
   justify-content: center; /* 水平居中 */
   align-items: center; /* 垂直居中 */
   position: relative; /* 相对定位 */
+}
+.background-iframe {
+  width:100%;
+  height: 100vh;
+  opacity: 0.8;
+  position: absolute; /* 绝对定位，覆盖在banner上 */
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-position: center center; /* 背景图片居中 */
+  background-size: cover; /* 背景图片不平铺，覆盖整个元素 */
 }
 .banner-img {
   width:100%;
@@ -115,7 +138,7 @@ export default {
   background-color: var(--background-color);
 }
 .next:before {
-  font-size: 32px;
+  font-size: 3rem;
   display: table;
   margin: 0 auto;
 }
