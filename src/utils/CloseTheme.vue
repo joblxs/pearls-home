@@ -1,6 +1,6 @@
 <!--关闭背景/点击效果-->
 <template>
-  <lay-tooltip position="left-start" :content="showBackground ? '关闭背景/点击效果' : '打开背景/点击效果'">
+  <lay-tooltip position="left-start" :content="showBackground ? '关闭特效' : '打开特效'">
     <lay-backtop
       @click="toggleBackground"
       :bottom="140"
@@ -9,7 +9,7 @@
       bgcolor="#5FB878"
       iconSize="22"
       :showHeight="0"
-      :icon="showBackground ? 'layui-icon-hide' : 'layui-icon-show'"
+      :icon="showBackground ? 'layui-icon-pause' : 'layui-icon-play'"
       disabled></lay-backtop>
   </lay-tooltip>
 </template>

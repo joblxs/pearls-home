@@ -1,7 +1,7 @@
 <template>
   <div class="banner">
-<!--    <div class="banner-img"></div>-->
-    <object class="background-iframe" :data="newBackground" type="text/html"></object>
+    <div class="background img" v-if="!newBackground"></div>
+    <object class="background" :data="newTheme" type="text/html" v-if="newBackground"></object>
     <div class="title wow animate__animated animate__bounceIn" data-wow-duration="2s">
       <h1>拾贝</h1>
       <p>{{ dailyQuote }}</p>
@@ -20,6 +20,7 @@ export default {
     const store = useStore();
     // 每日一言
     const dailyQuote = ref('');
+    const newTheme = ref('');
     const newBackground = ref('');
 
     const fetchDailyQuote = async () => {
@@ -43,18 +44,23 @@ export default {
 
     // 获取主题
     const theme = computed(() => store.state.theme);
+    const background = computed(() => store.state.background);
     // 监听主题变化
-    watch(theme, (newTheme) => {
-      newBackground.value = `/theme/background/Background-${newTheme}-${Math.random() < 0.5 ? 0 : 1}.html`;
+    watch(theme, (theme) => {
+      newTheme.value = `/theme/background/Background-${theme}-${Math.random() < 0.5 ? 0 : 1}.html`;
+    });
+    watch(background, (background) => {
+      newBackground.value = background;
     });
     // 在组件挂载时调用获取每日一言的函数
     onMounted(() => {
       fetchDailyQuote();
-      newBackground.value = `/theme/background/Background-${theme.value}-${Math.random() < 0.5 ? 0 : 1}.html`;
+      newTheme.value = `/theme/background/Background-${theme.value}-${Math.random() < 0.5 ? 0 : 1}.html`;
+      newBackground.value = background.value;
     });
 
     return {
-      scrollToNextSection, dailyQuote, newBackground
+      scrollToNextSection, dailyQuote, newTheme, newBackground
     }
   }
 }
@@ -69,24 +75,15 @@ export default {
   align-items: center; /* 垂直居中 */
   position: relative; /* 相对定位 */
 }
-.background-iframe {
+.background {
   width:100%;
   height: 100vh;
-  opacity: 0.8;
   position: absolute; /* 绝对定位，覆盖在banner上 */
   top: 0;
   left: 0;
-  background-repeat: no-repeat;
-  background-position: center center; /* 背景图片居中 */
-  background-size: cover; /* 背景图片不平铺，覆盖整个元素 */
 }
-.banner-img {
-  width:100%;
-  height: 100vh;
+.background.img {
   opacity: 0.8;
-  position: absolute; /* 绝对定位，覆盖在banner上 */
-  top: 0;
-  left: 0;
   background: url("@/assets/images/xingkong.webp");
   background-repeat: no-repeat;
   background-position: center center; /* 背景图片居中 */
