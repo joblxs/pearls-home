@@ -4,7 +4,7 @@
     <div class="links">
       <ul>
         <li class="wow animate__animated animate__lightSpeedInLeft" v-for="(site, index) in siteItems" :key="index">
-          <a :href="site.link" target="_blank" rel="noopener noreferrer">
+          <a :href="site.link" rel="noopener noreferrer">
             <lay-icon :type="site.icon" style="margin-right: 10px;"></lay-icon>
             {{ site.title }}
           </a>
@@ -19,8 +19,8 @@ export default {
   data() {
     return {
       siteItems: [
-        {title: '个人主页', icon: 'layui-icon-home', link: '/'},
-        {title: '博客', icon: 'layui-icon-template', link: 'https://www.lxshuai.top/'}
+        {title: '主页', icon: 'layui-icon-home', link: '#'},
+        {title: '博客', icon: 'layui-icon-template', link: '#'}
       ]
     };
   },

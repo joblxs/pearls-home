@@ -110,8 +110,8 @@ export default {
   border-radius: 50%;
   position: absolute;
   bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
+  //left: 50%;
+  //transform: translateX(-50%);
   transition: all .5s ease-out;
   cursor: pointer;
   z-index: 3;

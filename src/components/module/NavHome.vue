@@ -15,7 +15,7 @@
     <div class="navigation" :class="{ 'navigation-hidden': !isNavVisible }">
       <ul class="navigation-point">
         <li v-for="(site, index) in siteItems" :key="index">
-          <a :href="site.link" target="_blank" rel="noopener noreferrer">{{ site.title }}</a>
+          <a :href="site.link" rel="noopener noreferrer">{{ site.title }}</a>
         </li>
       </ul>
       <div class="navigation-logo"><a href="javascript:void(0)">拾贝</a></div>
@@ -30,8 +30,8 @@ export default {
   data() {
     return {
       siteItems: [
-        {title: '个人主页', icon: 'layui-icon-home', link: '/'},
-        {title: '博客', icon: 'layui-icon-template', link: 'https://www.lxshuai.top/'}
+        {title: '主页', icon: 'layui-icon-home', link: '#'},
+        {title: '博客', icon: 'layui-icon-template', link: '#'}
       ]
     };
   },
