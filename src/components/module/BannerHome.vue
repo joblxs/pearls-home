@@ -3,7 +3,7 @@
     <div class="background img" v-if="!newBackground"></div>
     <object class="background" :data="newTheme" type="text/html" v-if="newBackground"></object>
     <div class="title wow animate__animated animate__bounceIn" data-wow-duration="2s">
-      <h1>拾贝</h1>
+      <h1>拾贝|歪栈</h1>
       <p>{{ dailyQuote }}</p>
     </div>
     <lay-icon type="layui-icon-down" class="next wow animate__animated animate__zoomIn" data-wow-duration="2s" @click="scrollToNextSection"></lay-icon>

@@ -1,5 +1,5 @@
 <template>
-  <h1 class="wow animate__animated animate__zoomIn">热榜</h1>
+  <h1 class="wow animate__animated animate__zoomIn">歪贝热榜</h1>
   <div class="hot">
     <lay-container fluid>
       <lay-row space="30">

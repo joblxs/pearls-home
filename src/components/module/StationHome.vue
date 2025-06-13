@@ -1,5 +1,5 @@
 <template>
-  <h1 class="wow animate__animated animate__zoomIn">站点</h1>
+  <h1 class="wow animate__animated animate__zoomIn">歪贝站点</h1>
   <div class="section">
     <div class="links">
       <ul>
@@ -19,8 +19,8 @@ export default {
   data() {
     return {
       siteItems: [
-        {title: '主页', icon: 'layui-icon-home', link: '#'},
-        {title: '博客', icon: 'layui-icon-template', link: '#'}
+        {title: '主页', icon: 'layui-icon-home', link: 'javascript:void(0)'},
+        {title: '博客', icon: 'layui-icon-template', link: 'javascript:void(0)'}
       ]
     };
   },

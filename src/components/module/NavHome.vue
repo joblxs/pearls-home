@@ -18,7 +18,7 @@
           <a :href="site.link" rel="noopener noreferrer">{{ site.title }}</a>
         </li>
       </ul>
-      <div class="navigation-logo"><a href="javascript:void(0)">拾贝</a></div>
+      <div class="navigation-logo"><a href="javascript:void(0)">拾贝歪栈</a></div>
     </div>
   </div>
 </template>
@@ -30,8 +30,8 @@ export default {
   data() {
     return {
       siteItems: [
-        {title: '主页', icon: 'layui-icon-home', link: '#'},
-        {title: '博客', icon: 'layui-icon-template', link: '#'}
+        {title: '主页', icon: 'layui-icon-home', link: 'javascript:void(0)'},
+        {title: '博客', icon: 'layui-icon-template', link: 'javascript:void(0)'}
       ]
     };
   },
