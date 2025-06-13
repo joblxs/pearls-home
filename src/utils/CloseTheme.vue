@@ -1,6 +1,6 @@
 <!--关闭背景/点击效果-->
 <template>
-  <lay-tooltip position="left-start" :content="showBackground ? '关闭特效' : '打开特效'">
+  <lay-tooltip position="left-start" :content="showBackground ? '关闭动效' : '打开动效'">
     <lay-backtop
       @click="toggleBackground"
       :bottom="140"

@@ -47,7 +47,7 @@ export default {
     const background = computed(() => store.state.background);
     // 监听主题变化
     watch(theme, (theme) => {
-      newTheme.value = `/theme/background/Background-${theme}-${Math.random() < 0.5 ? 0 : 1}.html`;
+      newTheme.value = `/theme/background/Background-${theme}.html`;
     });
     watch(background, (background) => {
       newBackground.value = background;
@@ -55,7 +55,7 @@ export default {
     // 在组件挂载时调用获取每日一言的函数
     onMounted(() => {
       fetchDailyQuote();
-      newTheme.value = `/theme/background/Background-${theme.value}-${Math.random() < 0.5 ? 0 : 1}.html`;
+      newTheme.value = `/theme/background/Background-${theme.value}.html`;
       newBackground.value = background.value;
     });
 

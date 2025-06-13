@@ -26,7 +26,7 @@ import { mapState } from 'vuex';
 import FpsCounter from './utils/FpsCounter.vue'
 import ThemeToggler from './utils/ThemeToggler.vue';
 import TsParticles from './utils/TsParticles.vue';
-import ConfettiEffect from "@/utils/ConfettiEffect.vue";
+import ConfettiEffect from "@/utils/CanvasEffect.vue";
 import CloseTheme from "@/utils/CloseTheme.vue";
 
 export default {
