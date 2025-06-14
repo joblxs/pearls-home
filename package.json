@@ -13,6 +13,7 @@
     "animate.css": "^4.1.1",
     "axios": "^1.7.8",
     "canvas-confetti": "^1.9.3",
+    "cherry-markdown": "^0.9.3",
     "core-js": "^3.8.3",
     "nprogress": "^0.2.0",
     "tsparticles": "^3.7.1",
