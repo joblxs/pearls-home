@@ -34,8 +34,8 @@ export default {
       store.dispatch('setBackground', newShow);
       showBackground.value = newShow;
 
-      // 保存主题设置到localStorage，并设置84小时后过期
-      const expires = new Date().getTime() + 84 * 60 * 60 * 1000; // 12小时后的时间戳
+      // 保存主题设置到localStorage，并设置12小时后过期
+      const expires = new Date().getTime() + 12 * 60 * 60 * 1000; // 12小时后的时间戳
       localStorage.setItem('user-background', JSON.stringify({ showBackground: newShow, expires }));
     };
 
