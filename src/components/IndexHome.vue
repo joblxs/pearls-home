@@ -23,7 +23,7 @@ export default {
     BannerHome, StationHome, FooterHome, HotHome, NavHome
   },
   mounted() {
-    document.title = '拾贝歪栈|主页';
+    document.title = '拾贝歪栈 | 主页';
     document.querySelector('meta[name="keywords"]').setAttribute('content', '非标准灵感收藏馆 - 创意人的斜杠栈道');
     document.querySelector('meta[name="description"]').setAttribute('content', '在这里，每颗 “歪贝壳” 都是反套路的光 —— 收集小众视角、脑洞生活与反常识观察');
   }
