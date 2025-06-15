@@ -1,3 +1,4 @@
+<!--横幅-->
 <template>
   <div class="banner">
     <div class="background img" v-if="!newBackground"></div>

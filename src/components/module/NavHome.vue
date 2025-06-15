@@ -1,3 +1,4 @@
+<!--导航抽屉-->
 <template>
   <div class="nav">
     <lay-backtop
@@ -31,7 +32,7 @@ export default {
     return {
       siteItems: [
         {title: '主页', icon: 'layui-icon-home', link: 'javascript:void(0)'},
-        {title: '博客', icon: 'layui-icon-template', link: 'javascript:void(0)'}
+        {title: '博客', icon: 'layui-icon-template', link: '/blog'}
       ]
     };
   },

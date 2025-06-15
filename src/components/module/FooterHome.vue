@@ -1,3 +1,4 @@
+<!--底部-->
 <template>
   <div class="footer">
     <div ref="fishContainer" class="container"></div>

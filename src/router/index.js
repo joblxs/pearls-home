@@ -3,10 +3,22 @@ import { close, start } from '@/utils/nprogress'
 import NotFound from '../components/error/404.vue';
 
 const routes = [
+    // 首页
     {
         path: '/',
         name: 'Home',
         component: () => import('../components/IndexHome.vue')
+    },
+    // 博客
+    {
+        path: '/blog',
+        name: 'Blog',
+        component: () => import('../components/blog/BlogIndex.vue')
+    },
+    {
+        path: '/posts/:id',
+        name: 'Posts',
+        component: () => import('../components/blog/PostsHome.vue')
     },
     {
         path: '/:catchAll(.*)', // 捕获所有未匹配的路由

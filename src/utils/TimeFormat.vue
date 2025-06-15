@@ -30,10 +30,12 @@ export default {
       let typeList = ['default', '-', '/', '.', '年月日', '月日', '年']
       if (time < 0 || (typeof time === 'number' && isNaN(time)) || !date) {
         // 时间参数存在问题 此处alert仅做错误示例，实际应用以场景需求为准
-        return console.log("请查看时间参数是否满足规则:\n1、时间参数为必填参数且为过去时间 \n2、时间参数不合法(参考date参数规则)");
+        // console.log("请查看时间参数是否满足规则:\n1、时间参数为必填参数且为过去时间 \n2、时间参数不合法(参考date参数规则)")
+        return false;
       } else if ((zeroFillFlag && typeof zeroFillFlag !== 'boolean') || (type && !typeList.includes(type))) {
         // 补零参数或格式参数存在问题 此处alert仅做错误示例，实际应用以场景需求为准
-        return console.log("请查看补零参数/格式参数是否满足规则：\n1、补零参数为布尔值类型 \n2、格式参数不合法(参考type参数规则)");
+        // console.log("请查看补零参数/格式参数是否满足规则：\n1、补零参数为布尔值类型 \n2、格式参数不合法(参考type参数规则)")
+        return false;
       } else if (time < 10000) {
         // 10秒内
         return "刚刚";

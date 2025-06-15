@@ -1,3 +1,4 @@
+<!--热榜-->
 <template>
   <h1 class="wow animate__animated animate__zoomIn">歪贝热榜</h1>
   <div class="hot">
@@ -173,6 +174,6 @@ h1:after {
 
 .hot-list-article li a:hover {
   text-decoration: underline;
-  color: #6bc30d
+  color: var(--background-color);
 }
 </style>

@@ -22,11 +22,8 @@
 
       <!-- 贝壳地图导航 -->
       <div class="shell-map" @click="navigateHome">
-        <div class="map-line"></div>
         <div class="map-dot dot1"></div>
         <div class="map-dot dot2"></div>
-        <div class="map-dot dot3"></div>
-        <div class="map-dot dot4"></div>
         <div class="map-text">歪栈地图</div>
       </div>
     </div>
@@ -244,22 +241,12 @@ export default {
   box-shadow: 0 12px 25px rgba(255, 167, 38, 0.6);
 }
 
-.map-line {
-  position: absolute;
-  top: 50%;
-  left: clamp(15px, 3vw, 25px);
-  right: clamp(15px, 3vw, 25px);
-  height: 3px; /* 增大线条粗细 */
-  background: #fff;
-  transform: translateY(-50%);
-}
-
 .map-dot {
   position: absolute;
   top: 50%;
   width: clamp(7px, 1.5vw, 12px);
   height: clamp(7px, 1.5vw, 12px);
-  background: #fff;
+  background: var(--background-color);
   border-radius: 50%;
   transform: translateY(-50%);
 }
@@ -269,22 +256,13 @@ export default {
 }
 
 .dot2 {
-  left: clamp(35px, 7vw, 50px);
-}
-
-.dot3 {
-  right: clamp(35px, 7vw, 50px);
-}
-
-.dot4 {
   right: clamp(15px, 3vw, 25px);
 }
 
 .map-text {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* 更换字体 */
-  color: #fff;
+  color: #333;
   font-size: clamp(16px, 3.5vw, 20px);
-  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
   padding: 0 clamp(10px, 2.5vw, 15px);
   position: relative;
   z-index: 1;

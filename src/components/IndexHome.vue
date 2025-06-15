@@ -23,9 +23,9 @@ export default {
     BannerHome, StationHome, FooterHome, HotHome, NavHome
   },
   mounted() {
-    document.title = '拾贝歪栈 | 主页';
-    document.querySelector('meta[name="keywords"]').setAttribute('content', '非标准灵感收藏馆 - 创意人的斜杠栈道');
-    document.querySelector('meta[name="description"]').setAttribute('content', '在这里，每颗 “歪贝壳” 都是反套路的光 —— 收集小众视角、脑洞生活与反常识观察');
+    document.title = '拾贝歪栈 - 创意灵感与技术干货的反套路集合地';
+    document.querySelector('meta[name="keywords"]').setAttribute('content', '拾贝歪栈, 非标准灵感, 创意脑洞, 编程技巧, 代码片段, 小众技术, 开发灵感');
+    document.querySelector('meta[name="description"]').setAttribute('content', '欢迎来到拾贝歪栈！这里是创意人的斜杠栈道，收集小众视角、脑洞生活与反常识观察。每颗 “歪贝壳” 都是反套路的光，带你探索不一样的世界。');
   }
 }
 </script>
