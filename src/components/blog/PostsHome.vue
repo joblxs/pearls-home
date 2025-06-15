@@ -22,6 +22,11 @@ export default {
     document.title = '拾贝歪栈 - 歪码拾贝所，解锁编程反套路秘籍';
     document.querySelector('meta[name="keywords"]').setAttribute('content', '拾贝歪栈, 非标准代码灵感, 程序员斜杠栈, 反套路编程技巧, 代码片段贝壳库, bug彩蛋收集, 小众技术拾贝, 编程脑洞仓库, 开发灵感斜杠集, 技术反常识观察');
     document.querySelector('meta[name="description"]').setAttribute('content', '「拾贝歪栈」的代码贝壳滩，当别人在搜 “如何修复 bug”，我们在研究 “如何让 bug 变成会跳舞的贝壳动画”。这里收集前端骚操作、后端野路子、编程语言冷知识，每段非标准代码都是一颗反套路的光，为你带来全新的编程灵感。');
+
+    // 检测屏幕宽度
+    const isSmallScreen = window.innerWidth < 500;
+    const tocDefaultModel = isSmallScreen ? 'pure' : 'full';
+
     this.cherryInstance = new Cherry({
       id: 'markdown-container',
       value: '# 欢迎光临，您有一份「歪贝壳」待签收！\n' +
@@ -58,7 +63,7 @@ export default {
       toolbars: {
         toc: {
           updateLocationHash: false, // 要不要更新URL的hash
-          defaultModel: 'full', // pure: 精简模式/缩略模式，只有一排小点； full: 完整模式，会展示所有标题
+          defaultModel: tocDefaultModel, // 根据屏幕宽度设置默认模式，pure: 精简模式/缩略模式，只有一排小点； full: 完整模式，会展示所有标题
           showAutoNumber: false, // 是否显示自增序号
           position: 'fixed', // 悬浮目录的悬浮方式。当滚动条在cherry内部时，用absolute；当滚动条在cherry外部时，用fixed
           cssText: '', // 自定义样式
