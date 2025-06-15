@@ -204,6 +204,9 @@ export default {
   font-size: 24px;
   right: 0
 }
+.blog-search .layui-icon {
+  font-size: 24px;
+}
 
 @keyframes swingdown {
   0% {
@@ -300,7 +303,7 @@ export default {
 
 @media screen and (max-width: 1024px) {
   .blog-search {
-    left: 0
+    right: auto;
   }
 
   .header-fixed {

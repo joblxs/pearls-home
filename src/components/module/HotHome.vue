@@ -16,9 +16,9 @@
                 </li>
               </ul>
             </template>
-            <template v-slot:footer>
-              <time :datetime="item.updateTime" :title="item.updateTime" style="display: inline;">更新于<TimeFormat :date="item.updateTime" /></time>
-            </template>
+<!--            <template v-slot:footer>-->
+<!--              <time :datetime="item.updateTime" :title="item.updateTime" style="display: inline;">更新于<TimeFormat :date="item.updateTime" /></time>-->
+<!--            </template>-->
           </lay-card>
         </lay-col>
       </lay-row>
@@ -29,11 +29,11 @@
 <script>
 import { ref, onMounted } from 'vue';
 import axios from 'axios';
-import TimeFormat from '@/utils/TimeFormat.vue';
+// import TimeFormat from '@/utils/TimeFormat.vue';
 
 export default {
   components: {
-    TimeFormat
+    // TimeFormat
   },
   setup() {
     // 使用ref创建响应式数据
@@ -74,7 +74,8 @@ export default {
 
     // 返回响应式数据
     return {
-      hotList, TimeFormat
+      hotList,
+      // TimeFormat
     };
   }
 }

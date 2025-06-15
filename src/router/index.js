@@ -18,7 +18,7 @@ const routes = [
     {
         path: '/posts/:id',
         name: 'Posts',
-        component: () => import('../components/blog/PostsHome.vue')
+        component: () => import('../components/blog/BlogPosts.vue')
     },
     {
         path: '/:catchAll(.*)', // 捕获所有未匹配的路由
