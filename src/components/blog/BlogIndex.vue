@@ -66,7 +66,6 @@ export default {
 @media screen and (max-width: 1024px) {
   .col-content, .col-other {
     width: 100%;
-    float: none
   }
 
   .container-fixed {
